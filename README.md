@@ -10,11 +10,11 @@ do not need a GitHub account just to use the files.
 
 ## What You Will Install
 
-You will need:
+The process described below takes you through an installation of:
 
 1. **VS Code**, the editor we will use for Lean.
 2. **The Lean 4 extension for VS Code**.
-3. **Lean**, installed through Lean's version manager, `elan`.
+3. **Mathlib**.
 4. **Git**, which Lean/Lake uses to download mathlib dependencies. You do not
    need to learn Git for the workshop.
 5. **This repository**, downloaded from GitHub.
@@ -75,11 +75,10 @@ This is the simplest option if you do not know Git.
 
 ### Option B: Use Git
 
-If you already have Git installed, open a terminal and run:
+If you already have Git installed, open a terminal, navigate to a folder where you want this workshop's files to live, and run:
 
 ```bash
 git clone https://github.com/AlexKontorovich/HUJI2026.git
-cd HUJI2026
 ```
 
 You do not need a GitHub account for this command.
@@ -119,8 +118,9 @@ lake exe cache get
 ```
 
 The first time you run this, Lean may also download the exact Lean version used
-by this project. That is normal. This repository currently uses the Lean
-toolchain written in the file `lean-toolchain`.
+by this project. That is normal. (Note that this step can take ~15 mins the first 
+time it's run. If you have antivirus software installed, it may take even longer.) 
+This repository currently uses the Lean toolchain written in the file `lean-toolchain`.
 
 When the cache command finishes, run:
 
@@ -135,7 +135,7 @@ If `lake build` finishes without an error, your local copy is ready.
 Open:
 
 ```text
-HUJI2026/Basic.lean
+Workshop/Basic.lean
 ```
 
 At first, the file contains only:
@@ -162,13 +162,13 @@ Downloads precompiled mathlib files.
 lake build
 ```
 
-Checks that the project builds.
+Checks that the project builds. If you downloaded the repository using Git, then:
 
 ```bash
 git pull
 ```
 
-Updates your copy of the repository, if you downloaded it using Git.
+updates your copy.
 
 If you downloaded a ZIP file, `git pull` will not work. To update, download a
 fresh ZIP file from GitHub.
@@ -222,4 +222,4 @@ with any of the following:
 
 The important thing is not to know everything in advance. The important thing is
 to arrive with the project open in VS Code and Lean responding to the file
-`HUJI2026/Basic.lean`.
+`Workshop/Basic.lean`.

@@ -16,6 +16,6 @@ require mathlib from git
   "https://github.com/leanprover-community/mathlib4.git"
 
 @[default_target]
-lean_lib «HUJI2026» where
-  globs := #[.submodules `HUJI2026]
+lean_lib «WorkshopFiles» where
+  globs := #[.submodules `WorkshopFiles]
   moreLeanArgs := moreLeanArgs
